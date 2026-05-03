@@ -1,0 +1,172 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  min-height: 100vh;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #f7f8fa;
+  color: #111827;
+  line-height: 1.5;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+input {
+  font-family: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.me-spin {
+  animation: spin 1s linear infinite;
+}
+
+.me-slide-up {
+  animation: slideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.me-card {
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+.me-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.08);
+  border-color: #99f6e4 !important;
+}
+.me-card:hover .me-card-img {
+  transform: scale(1.05);
+}
+.me-card:hover .me-card-title {
+  color: #0f766e;
+}
+
+.me-list-item {
+  transition: box-shadow 0.2s, border-color 0.2s;
+}
+.me-list-item:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  border-color: #99f6e4 !important;
+}
+.me-list-item:hover .me-list-title {
+  color: #0f766e;
+}
+.me-list-item:hover .me-list-chevron {
+  color: #14b8a6;
+}
+
+.me-row {
+  transition: background-color 0.15s;
+}
+.me-row:hover {
+  background-color: rgba(240, 253, 250, 0.6);
+}
+.me-row:hover .me-row-title {
+  color: #0f766e;
+}
+
+.me-view-btn {
+  transition: all 0.15s;
+}
+.me-view-btn:hover:not(.active) {
+  color: #374151 !important;
+}
+
+.me-btn-icon {
+  transition: background-color 0.15s, color 0.15s;
+}
+
+.me-page-btn {
+  transition: background-color 0.15s;
+}
+.me-page-btn:not(:disabled):hover {
+  background-color: #f9fafb;
+}
+
+.me-link-btn {
+  transition: background-color 0.15s;
+}
+.me-link-btn.red:hover {
+  background-color: #fee2e2;
+}
+.me-link-btn.teal:hover {
+  background-color: #ccfbf1;
+}
+
+.me-close-btn {
+  transition: background-color 0.15s;
+}
+.me-close-btn:hover {
+  background-color: #ffffff;
+}
+
+.me-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.me-clamp-1 {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.me-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.me-input:focus {
+  outline: none;
+  border-color: #2dd4bf;
+  box-shadow: 0 0 0 3px rgba(20, 184, 166, 0.15);
+}
